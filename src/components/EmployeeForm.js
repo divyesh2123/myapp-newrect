@@ -15,6 +15,7 @@ export default function EmployeeForm(props) {
     })
 
     const handle = (e)=> {
+        
 
         setData({...data,[e.target.name] : e.target.value});
 
@@ -26,15 +27,23 @@ export default function EmployeeForm(props) {
 
         e.preventDefault();
         let d = [...list];
+
+        if(edi < 0)
+        {
         d.push(data);
+        }
+        else
+        {
+            d[edi] = data;
+        }
         setlist(d);
     }
   return (
     <div>
             <form onSubmit={submitData}>
 
-                <input type='text' name='firstname'  onChange={handle} value={data.firstname}/>
-                <input type='text' name='lastname'  onChange={handle} value={data.lastname} />
+                <input type='text' name='firstname'  onChange={handle} value={data?.firstname}/>
+                <input type='text' name='lastname'  onChange={handle} value={data?.lastname} />
 
                 <input type='submit'  value="save"/>
 

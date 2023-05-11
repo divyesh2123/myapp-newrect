@@ -6,7 +6,7 @@ export default function EmployeeList(props) {
   return (
     <table><tbody>{
         
-            list.map((value,index)=> {
+            list?.map((value,index)=> {
 
                 return (<EmployeeIneer mydata = {value}
                      key={index} del={remove} ind={index} edit={setedi}></EmployeeIneer>)

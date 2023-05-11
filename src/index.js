@@ -4,11 +4,16 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Emplopyee from './pages/Emplopyee';
+import Display from './components/Display';
+import TutorialForm from './components/TutorialForm';
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from 'react-toastify';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Emplopyee />
+    <ToastContainer />
+    <TutorialForm />
   </React.StrictMode>
 );
 
