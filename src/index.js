@@ -8,12 +8,16 @@ import Display from './components/Display';
 import TutorialForm from './components/TutorialForm';
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from 'react-toastify';
+import Login from './pages/Login';
+// import './axiosbase/global';
+import Accounts from './pages/Accounts';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <ToastContainer />
-    <TutorialForm />
+    <Login />
+    <Accounts/>
   </React.StrictMode>
 );
 
