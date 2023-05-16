@@ -11,13 +11,17 @@ import { ToastContainer } from 'react-toastify';
 import Login from './pages/Login';
 // import './axiosbase/global';
 import Accounts from './pages/Accounts';
+import Comments from './pages/Comments';
+import Student from './pages/Student';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <ToastContainer />
-    <Login />
-    <Accounts/>
+    {/* <Login />  */}
+    <Student/> 
+  
+   
   </React.StrictMode>
 );
 

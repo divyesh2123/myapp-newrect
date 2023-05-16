@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios';
-import authFetch from '../axiosbase/custom';
+import authFetch from '../axiosbase/intersepctor';
 
 export default function Accounts() {
 
@@ -12,7 +12,7 @@ export default function Accounts() {
     .then(y=> {
 
         console.log(y);
-    })
+    });
    },[])
   return (
     <div>Accounts</div>
