@@ -13,14 +13,18 @@ import Login from './pages/Login';
 import Accounts from './pages/Accounts';
 import Comments from './pages/Comments';
 import Student from './pages/Student';
+import MyForm from './components/MyForm';
+import FullFormFunction from './pages/FullFormFunction';
+import SimpleFormik from './pages/SimpleFormik';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <ToastContainer />
     {/* <Login />  */}
-    <Student/> 
+    {/* <Student/>  */}
   
+    <SimpleFormik/>
    
   </React.StrictMode>
 );

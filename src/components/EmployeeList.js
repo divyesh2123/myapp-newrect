@@ -9,7 +9,7 @@ export default function EmployeeList(props) {
             list?.map((value,index)=> {
 
                 return (<EmployeeIneer mydata = {value}
-                     key={index} del={remove} ind={index} edit={setedi}></EmployeeIneer>)
+                      del={remove} ind={index} edit={setedi}></EmployeeIneer>)
             })
         } </tbody></table>
   )
