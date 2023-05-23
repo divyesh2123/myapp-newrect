@@ -9,9 +9,9 @@ export default function FullFormFunction() {
             mobile: "",
             password: "",
             confirmPassword: "",
-            gender: null,
+            gender: "",
             language: [],
-            country: "Canada",
+            country: "",
             zipCode: ""
           },
           formErrors: {

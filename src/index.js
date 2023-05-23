@@ -8,14 +8,8 @@ import Display from './components/Display';
 import TutorialForm from './components/TutorialForm';
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from 'react-toastify';
-import Login from './pages/Login';
-// import './axiosbase/global';
-import Accounts from './pages/Accounts';
-import Comments from './pages/Comments';
-import Student from './pages/Student';
+
 import MyForm from './components/MyForm';
-import FullFormFunction from './pages/FullFormFunction';
-import SimpleFormik from './pages/SimpleFormik';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -24,7 +18,7 @@ root.render(
     {/* <Login />  */}
     {/* <Student/>  */}
   
-    <SimpleFormik/>
+    <MyForm/>
    
   </React.StrictMode>
 );
