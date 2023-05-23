@@ -8,13 +8,8 @@ const validationSchema = yup.object().shape({
     .required('First name is required.')
     .min(3, 'Minimum 3 characters required')
     .max(23,"Max 23 characters required")
-    ,
-  lastName: yup.string().required('Last name is required'),
-  emailId: yup
-    .string()
-    .required('Email ID is required')
-    .email('Enter valid email id'),
-  mobileNumber: yup.number()
+    
+ 
 });
 export default function MyForm() {
 
@@ -29,7 +24,7 @@ export default function MyForm() {
           firstName: '',
           lastName: '',
           emailId: '',
-          mobileNumber: undefined,
+          mobileNumber: "",
           gender: '',
           address: ''
         },
@@ -60,44 +55,12 @@ export default function MyForm() {
                 <label> First Name </label>
                 <div>
                   <input type="text"  
-                  {...formik.getFieldProps('firstName')} />
+                  {...formik.getFieldProps('firstName')} style={} />
                   {renderErrorMessage('firstName')}
                   
                 </div>
               </div>
-              <div class="form-group">
-                <label> Last Name </label>
-                <div>
-                  <input type="text"
-                   {...formik.getFieldProps('lastName')} />
-                  {renderErrorMessage('lastName')}
-                </div>
-
-                <ErrorMessage name='lastname' component="div"/>
-              </div>
-              <div class="form-group">
-                <label> Email Id </label>
-                <div>
-                  <input type="text" {...formik.getFieldProps('emailId')} />
-                  {renderErrorMessage('emailId')}
-                </div>
-              </div>
-              <div class="form-group">
-                <label> Mobile Number </label>
-                <input type="text" {...formik.getFieldProps('mobileNumber')} />
-              </div>
-              <div class="form-group">
-                <label> Gender </label>
-                <select {...formik.getFieldProps('gender')}>
-                  <option value="">Select</option>
-                  <option value="male">Male</option>
-                  <option value="female">Female</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label> Address </label>
-                <textarea type="text" {...formik.getFieldProps('address')} />
-              </div>
+             
               <div>
                 <button type="submit" class="btn-primary">
                   Submit
@@ -125,9 +88,7 @@ export default function MyForm() {
               <pre>{JSON.stringify(formik.errors,null,)}</pre>
             </code>
             <h5>Touched:</h5>
-            <code>
-              <pre>{JSON.stringify(formik.touched, null, 2)}</pre>
-            </code>
+            
           </div>
         </div>
       );
